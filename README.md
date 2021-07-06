@@ -15,8 +15,8 @@
 | Flavor            | list cookies              | return cookiesLi                  | import: cookies                                   |   |
 | Price             | export cookies            | THIS IS WHERE YOU CREATE ELEMENTS | loop cookies using : for (let BOOGER of cookies)  |   |
 | Img               |                           |                                   |                                                   |   |
-| Category          |                           |                                   |                                                   |   |
+| Describe          |                           |                                   |                                                   |   |
 | ul id='cookies'   |                           |  appendChild                      |                                                   |   |
 |                   |                           |                                   |                                                   |   |
-|                   |                           |                                   |                                                   |   |
+|btn for each item  |                           |                                   |                                                   |   |
 |                   |                           |                                   |                                                   |   |
