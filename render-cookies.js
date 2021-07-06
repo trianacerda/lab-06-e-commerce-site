@@ -9,7 +9,7 @@ export function renderCookies(cookies){
     cookiesImg.alt = cookies.name;
 
     const cookiesSpan = document.createElement ('span'); //price
-    cookiesSpan.textContent = `${cookies.price}`;
+    cookiesSpan.textContent = `$${cookies.price}`;
 
     const cookiesSpan1 = document.createElement ('span'); //description
     cookiesSpan1.textContent = `${cookies.description}`;

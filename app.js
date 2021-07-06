@@ -1,7 +1,7 @@
 // import functions renderCookies and grab DOM elements
 import { renderCookies } from './render-cookies.js';
 import cookies from './cookie-jar.js';
-console.log(cookies);
+//console.log(cookies);
 // import cookies(list) from cookie-jar
 
 // initialize state

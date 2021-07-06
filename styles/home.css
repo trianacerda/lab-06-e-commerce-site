@@ -2,15 +2,20 @@
 #cookies {
     display: flex;
     flex-wrap: wrap;
+  
 }
 
 #cookies li img{
     width: 200px;
- 
+    border: 4px solid sandybrown;
 }
 
 #cookies li{
     display: flex;
     flex-direction: column;
-    
+    padding: 70px;
+}
+
+#cookies li button{
+    border-radius: 25%;
 }

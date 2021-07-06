@@ -1,1 +1,1 @@
-import './example.test.js';
+import './cookies.test.js';
