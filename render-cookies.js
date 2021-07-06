@@ -11,6 +11,9 @@ export function renderCookies(cookies){
     const cookiesSpan = document.createElement ('span'); //price
     cookiesSpan.textContent = `${cookies.price}`;
 
+    const cookiesSpan1 = document.createElement ('span'); //description
+    cookiesSpan1.textContent = `${cookies.description}`;
+
     const cookiesBtn = document.createElement('button'); //button
     cookiesBtn.textContent = 'Add to Jar';
 
@@ -19,7 +22,7 @@ export function renderCookies(cookies){
     cookiesLi.appendChild(cookiesImg);
     cookiesLi.appendChild(cookiesSpan);
     cookiesLi.appendChild(cookiesBtn);
-    
+    cookiesLi.appendChild(cookiesSpan1);
     
     return cookiesLi;
 }

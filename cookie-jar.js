@@ -1,5 +1,3 @@
-export default cookies;
-
 const chocolateChip = {
     id : 'chocolate chip',
     name: 'chocolate chip',
@@ -22,7 +20,7 @@ const mm = {
     id: 'mm',
     name: 'mm',
     price: 4.50,
-    img: 'cowboy.jpeg',
+    img: 'mm.jpeg',
     description: 'colorful chocolate'
     
 };
@@ -31,7 +29,7 @@ const rainbow = {
     id: 'rainbow',
     name: 'rainbow',
     price: 3.50,
-    img: 'cowboy.jpeg',
+    img: 'rainbow.jpeg',
     description: 'happiness'
     
 };
@@ -44,3 +42,13 @@ const sugar = {
     description: 'just a lil frosting and sprinkles'
     
 };
+
+const cookies = [
+    chocolateChip,
+    cowboy,
+    mm,
+    rainbow,
+    sugar
+];
+
+export default cookies;

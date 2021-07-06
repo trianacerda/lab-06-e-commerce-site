@@ -1,1 +1,16 @@
 /* add home page styles here */
+#cookies {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#cookies li img{
+    width: 200px;
+ 
+}
+
+#cookies li{
+    display: flex;
+    flex-direction: column;
+    
+}
