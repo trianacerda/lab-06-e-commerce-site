@@ -7,7 +7,7 @@
 
 #cookies li img{
     width: 200px;
-    border: 4px solid sandybrown;
+    border: 4px solid steelblue;
 }
 
 #cookies li{
@@ -17,5 +17,5 @@
 }
 
 #cookies li button{
-    border-radius: 25%;
+    border-radius: 40px;
 }
