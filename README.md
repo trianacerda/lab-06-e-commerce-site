@@ -9,3 +9,14 @@
 8) Consider your data model. What objects will you be using? What are the key/value pairs? What arrays do you need? What needs to live in local storage?
 9) Consider what features _depend_ on what other features. Use this dependency logic to figure out what order to complete tasks.
 
+| HTML: cookies     | cookie-jar.js             | render-cookies                    | app.js                                            |   |
+|-------------------|---------------------------|-----------------------------------|---------------------------------------------------|---|
+| Name              | ul:cookies - lay out info | write function                    | import function: renderCookies                    |   |
+| Flavor            | list cookies              | return cookiesLi                  | import: cookies                                   |   |
+| Price             | export cookies            | THIS IS WHERE YOU CREATE ELEMENTS | loop cookies using : for (let BOOGER of cookies)  |   |
+| Img               |                           |                                   |                                                   |   |
+| Category          |                           |                                   |                                                   |   |
+| ul id='cookies'   |                           |  appendChild                      |                                                   |   |
+|                   |                           |                                   |                                                   |   |
+|                   |                           |                                   |                                                   |   |
+|                   |                           |                                   |                                                   |   |
