@@ -20,7 +20,7 @@ const mm = {
     id: 'mm',
     name: 'mm',
     price: 4.50,
-    img: 'mm.jpeg',
+    img: 'm&m.jpeg',
     description: 'colorful chocolate'
     
 };
@@ -29,7 +29,7 @@ const rainbow = {
     id: 'rainbow',
     name: 'rainbow',
     price: 3.50,
-    img: 'rainbow.jpeg',
+    img: 'rainbow2.jpeg',
     description: 'happiness'
     
 };
@@ -38,7 +38,7 @@ const sugar = {
     id: 'sugar',
     name: 'sugar',
     price: 3.00,
-    img: 'sugar.jpeg',
+    img: 'sugar1.jpeg',
     description: 'just a lil frosting and sprinkles'
     
 };
