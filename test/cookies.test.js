@@ -1,7 +1,7 @@
 // IMPORT MODULES under test here:
 // import { example } from '../example.js';
 import { renderCookies } from '../render-cookies.js';
-import { findByID, renderTableRow } from '../utils.js';
+import { findByID, renderTableRow, cartTotal } from '../utils.js';
 import cookies from '../data/cookie-jar.js';
 
 const test = QUnit.test;
@@ -61,17 +61,18 @@ test('renderTableRow returns a <tr> element', expect => {
 test('cartTotal should return total amount in cart', expect=> {
     const cart = [
         { id: 1, qty: 4 },
-        { id: 3, qty: 5 },
+        { id: 2, qty: 5 }
     ];
     const cartData = [{
         id: 1,
-        price:2
+        price: 3
     },
     {
-        id:3,
+        id: 2,
         price: 4
     }];
 
-    const expected = 28;
-    const actual = cartTotal
-})
+    const expected = 32;
+    const actual = cartTotal(cartData, cart);
+    expect.equal(expected, actual);
+});
