@@ -42,7 +42,7 @@ export function cartTotal(cookies, cart){
     let cartTotal = 0;
     for (let booger of cart) {
         const cookie = findByID(cookies, booger.id);
-        cartTotal += cookie.price * cookie.qty;
+        cartTotal += cookie.price * booger.qty;
     }
     return cartTotal;
 }

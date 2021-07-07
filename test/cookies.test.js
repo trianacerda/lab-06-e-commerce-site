@@ -74,5 +74,5 @@ test('cartTotal should return total amount in cart', expect=> {
 
     const expected = 32;
     const actual = cartTotal(cartData, cart);
-    expect.equal(expected, actual);
+    expect.equal(actual, expected);
 });
