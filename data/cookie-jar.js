@@ -1,5 +1,5 @@
 const chocolateChip = {
-    id : 'chocolate chip',
+    id : 1,
     name: 'chocolate chip',
     price: 3.00,
     img: 'chocChip.jpeg',
@@ -8,7 +8,7 @@ const chocolateChip = {
 };
 
 const cowboy = {
-    id: 'cowboy',
+    id: 2,
     name: 'cowboy',
     price: 4.00,
     img: 'cowboy.jpeg',
@@ -17,7 +17,7 @@ const cowboy = {
 };
 
 const mm = {
-    id: 'mm',
+    id: 3,
     name: 'mm',
     price: 4.50,
     img: 'm&m.jpeg',
@@ -26,7 +26,7 @@ const mm = {
 };
 
 const rainbow = {
-    id: 'rainbow',
+    id: 4,
     name: 'rainbow',
     price: 3.50,
     img: 'rainbow2.jpeg',
@@ -35,7 +35,7 @@ const rainbow = {
 };
 
 const sugar = {
-    id: 'sugar',
+    id: 5,
     name: 'sugar',
     price: 3.00,
     img: 'sugar1.jpeg',

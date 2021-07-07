@@ -1,6 +1,8 @@
 // IMPORT MODULES under test here:
 // import { example } from '../example.js';
 import { renderCookies } from '../render-cookies.js';
+import { findByID } from '../utils.js';
+import cookies from '../data/cookie-jar.js';
 
 const test = QUnit.test;
 
@@ -21,3 +23,21 @@ test('test renderCookies', (expect) => {
 
     expect.equal(actual.outerHTML, expected);
 });
+
+test('returns cookie by id', expect => {
+    const expected = {
+        id: 4,
+        name: 'rainbow',
+        price: 3.50,
+        img: 'rainbow2.jpeg',
+        description: 'happiness'
+        
+    }; 
+    const actual = findByID(cookies, 4);
+
+    expect.deepEqual(actual, expected);
+    
+});
+
+test('renderTableRow')
+
