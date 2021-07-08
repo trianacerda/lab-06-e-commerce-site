@@ -1,4 +1,4 @@
-export function findByID(items, id){
+export function findById(items, id){
     for (const booger of items) { 
         if (booger.id === id) {
             return booger; 
@@ -30,8 +30,8 @@ export function renderTableRow(cookieItem, cartItem){
 
 
     const tdTotal = document.createElement('td');
-    const total = cookieItem.price * cartItem.qty;
-    tdTotal.textContent = toUSD(total);
+    const total = calcItemTotal(cookieItem, cartItem);
+    tdTotal.textContent = total;
     tr.appendChild(tdTotal);
 
     return tr;
@@ -41,8 +41,13 @@ export function renderTableRow(cookieItem, cartItem){
 export function cartTotal(cookies, cart){
     let cartTotal = 0;
     for (let booger of cart) {
-        const cookie = findByID(cookies, booger.id);
+        const cookie = findById(cookies, booger.id);
         cartTotal += cookie.price * booger.qty;
     }
     return cartTotal;
+}
+
+export function calcItemTotal(cookieItem, cartItem){
+    const itemTotal = cookieItem.price * cartItem.qty;
+    return toUSD(itemTotal);
 }

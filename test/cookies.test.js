@@ -1,7 +1,5 @@
-// IMPORT MODULES under test here:
-// import { example } from '../example.js';
 import { renderCookies } from '../render-cookies.js';
-import { findByID, renderTableRow, cartTotal } from '../utils.js';
+import { findById, renderTableRow, cartTotal, calcItemTotal } from '../utils.js';
 import cookies from '../data/cookie-jar.js';
 
 const test = QUnit.test;
@@ -33,7 +31,7 @@ test('returns cookie by id', expect => {
         description: 'happiness'
         
     }; 
-    const actual = findByID(cookies, 4);
+    const actual = findById(cookies, 4);
 
     expect.deepEqual(actual, expected);
     
@@ -74,5 +72,13 @@ test('cartTotal should return total amount in cart', expect=> {
 
     const expected = 32;
     const actual = cartTotal(cartData, cart);
+    expect.equal(actual, expected);
+});
+
+test('test if calcItemTotal === total amount', expect => {
+    const rainbow = { id:1, price: 3.50 };
+    const qty = { id: 1, qty: 2 };
+    const expected = '$7.00';
+    const actual = calcItemTotal(rainbow, qty);
     expect.equal(actual, expected);
 });
