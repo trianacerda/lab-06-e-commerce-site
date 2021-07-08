@@ -16,6 +16,10 @@ export function renderCookies(cookies){
 
     const cookiesBtn = document.createElement('button'); //button
     cookiesBtn.textContent = 'Add to Jar';
+    cookiesBtn.classList.add('add');
+    cookiesBtn.value = cookies.id;
+
+
 
 
     cookiesLi.appendChild(cookiesh3);

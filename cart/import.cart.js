@@ -13,3 +13,15 @@ for (let cookieQty of cart) {
 const totalDom = document.getElementById('order-total');
 const total = cartTotal(cookies, cart);
 totalDom.textContent = toUSD(total);
+
+const resetBtn = document.getElementById('reset-btn');
+const placeOrderBtn = document.getElementById('order-btn');
+
+resetBtn.addEventListener('click', (e)=> {
+
+}
+
+
+// OrderBtn.addEventListener('click', (e)=> {
+
+// }

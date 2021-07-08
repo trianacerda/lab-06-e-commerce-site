@@ -1,7 +1,7 @@
 import { findById } from './utils.js';
 
 //functions for storage.tests.js 
-export let CART = 'cookie-cart';
+export const CART = 'cookie-cart';
 
 export function getCartLs(){
     let stringCart = localStorage.getItem(CART) || '[]';
