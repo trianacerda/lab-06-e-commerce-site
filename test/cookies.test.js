@@ -15,7 +15,7 @@ test('test renderCookies', (expect) => {
     
     };
     
-    const expected = `<li><h3>cowboy</h3><img src="./assets/cowboy.jpeg" alt="cowboy"><span>$4</span><button>Add to Jar</button><span>mixture of everything but the sink</span></li>`;
+    const expected = `<li><h3>cowboy</h3><img src="./assets/cowboy.jpeg" alt="cowboy"><span>$4</span><button class="add" value="cowboy">Add to Jar</button><span>mixture of everything but the sink</span></li>`;
     
     const actual = renderCookies(cowboy);
 

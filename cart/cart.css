@@ -1,5 +1,5 @@
 
-table {
+table{
     border-collapse: collapse;
     border: 3px solid rgb(113, 168, 134);
 }
@@ -10,4 +10,10 @@ thead {
 table th, table td {
     padding: 10px;
     text-align: right;
+}
+
+#reset-btn, #order-btn{
+    font-style: oblique;
+    background-color:thistle;
+    border-radius: 20px;
 }
