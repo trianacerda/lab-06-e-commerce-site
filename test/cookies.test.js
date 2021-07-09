@@ -82,3 +82,4 @@ test('test if calcItemTotal === total amount', expect => {
     const actual = calcItemTotal(rainbow, qty);
     expect.equal(actual, expected);
 });
+

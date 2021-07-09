@@ -61,3 +61,21 @@ test('clearCart should clear the cart from localStorage', (expect) =>{
     expect.deepEqual(cart, expected);
 
 });
+
+test('setCart should set items in localStorage', (expect) =>{
+    const fakeCart = [
+        { id:1, qty: 3 },
+        { id:2, qty: 4 },
+    ]; 
+
+    const fakeCartStr = JSON.stringify(fakeCart);
+    localStorage.setItem('CART', JSON.stringify(fakeCartStr));
+
+    clearCart();
+
+    const expected = [];
+    const cart = getCartLs();
+    expect.deepEqual(cart, expected);
+
+});
+
