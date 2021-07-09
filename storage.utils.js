@@ -1,7 +1,7 @@
 import { findById } from './utils.js';
 
 //functions for storage.tests.js 
-export const CART = 'cookie-cart';
+export const CART = 'COOKIE-CART';
 
 export function getCartLs(){
     let stringCart = localStorage.getItem(CART) || '[]';
@@ -9,6 +9,9 @@ export function getCartLs(){
     return cart;
 }
 
+function setCart(cart){
+    localStorage.setItem(CART, JSON.stringify(cart));
+}
 export function addItemtoCartById(cookieId){
     const cart = getCartLs();
     const cookie = findById(cart, cookieId);
@@ -19,11 +22,10 @@ export function addItemtoCartById(cookieId){
         const newCookie = { id: cookieId, qty: 1 };
         cart.push(newCookie);
     }
-    localStorage.setItem(CART, JSON.stringify(cart));
+    setCart(cart);
 }
 
 export function clearCart(){
     localStorage.removeItem(CART);
 }
-
 
