@@ -19,7 +19,17 @@ export function renderCookies(cookies){
     cookiesBtn.classList.add('add');
     cookiesBtn.value = cookies.id;
 
-
+    const dropDown = document.createElement('select');
+    const one = document.createElement('option');
+    one.textContent = '1';
+    one.value = 1;
+    const two = document.createElement('option');
+    two.textContent = '2';
+    two.value = 2;
+    const three = document.createElement('option');
+    three.textContent = '3';
+    three.value = 3;
+    dropDown.append(one, two, three);
 
 
     cookiesLi.appendChild(cookiesh3);
@@ -27,6 +37,8 @@ export function renderCookies(cookies){
     cookiesLi.appendChild(cookiesSpan);
     cookiesLi.appendChild(cookiesBtn);
     cookiesLi.appendChild(cookiesSpan1);
+    cookiesLi.appendChild(dropDown);
+
     
     return cookiesLi;
 }
