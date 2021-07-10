@@ -18,7 +18,7 @@ for (let booger of cookies){
 const addButtons = document.querySelectorAll('.add');
 for (let btn of addButtons) {
     btn.addEventListener('click', (e)=>{
-        console.log('I am clickin');
+        //console.log('I am clickin');
         addItemtoCartById(Number(e.target.value));
     });
 }
