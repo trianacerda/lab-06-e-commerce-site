@@ -4,6 +4,7 @@ import cookies from '../data/cookie-jar.js';
 const test = QUnit.test;
 
 test('getCartLs return the shopping cart from localStorage as object', (expect) => {
+    localStorage.removeItem(CART);
     const fakeCart = [
         { id:1, qty: 3 },
         { id:2, qty: 4 }
@@ -25,6 +26,7 @@ test('getCartLs should return empty array if empty cart', (expect) => {
 });
 //
 test('addItemtoCartById should update qty if cookie already in cart', (expect) => {
+    localStorage.removeItem(CART);
     const fakeCart = [
         { id:1, qty: 3 },
         { id:2, qty: 4 },
@@ -46,6 +48,7 @@ test('addItemtoCartById should update qty if cookie already in cart', (expect) =
 });
 //
 test('clearCart should clear the cart from localStorage', (expect) =>{
+    localStorage.removeItem(CART);
     const fakeCart = [
         { id:1, qty: 3 },
         { id:2, qty: 4 },
@@ -63,6 +66,7 @@ test('clearCart should clear the cart from localStorage', (expect) =>{
 });
 
 test('setCart should set items in localStorage', (expect) =>{
+    localStorage.removeItem('RESULTS');
     const fakeCart = [
         { id:1, qty: 3 },
         { id:2, qty: 4 },
@@ -80,7 +84,7 @@ test('setCart should set items in localStorage', (expect) =>{
 });
 
 test('getProducts returns the list of products from LS', (expect) => {
-    localStorage.removeItem('RESULTS');
+    localStorage.removeItem(PRODUCTS);
     const fakeCart = [
         { id:1, qty: 3 },
         { id:2, qty: 4 },
@@ -95,7 +99,7 @@ test('getProducts returns the list of products from LS', (expect) => {
 });
 
 test('getProducts return the default data if nothing is stored in LS', (expect) =>{
-    // localStorage.removeItem('RESULTS');
+    localStorage.removeItem(PRODUCTS);
     const expected = cookies;
     const actual = getProducts();
     expect.deepEqual(expected, actual);
