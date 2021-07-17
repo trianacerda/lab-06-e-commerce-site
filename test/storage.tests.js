@@ -1,6 +1,6 @@
 //tests for storage.utils.js
-import { CART, getCartLs, addItemtoCartById, clearCart } from '../storage.utils.js';
-
+import { CART, getCartLs, addItemtoCartById, clearCart, PRODUCTS, getProducts } from '../storage.utils.js';
+import cookies from '../data/cookie-jar.js';
 const test = QUnit.test;
 
 test('getCartLs return the shopping cart from localStorage as object', (expect) => {
@@ -79,3 +79,24 @@ test('setCart should set items in localStorage', (expect) =>{
 
 });
 
+test('getProducts returns the list of products from LS', (expect) => {
+    localStorage.removeItem('RESULTS');
+    const fakeCart = [
+        { id:1, qty: 3 },
+        { id:2, qty: 4 },
+    ]; 
+
+    const fakeCartStr = JSON.stringify(fakeCart);
+    localStorage.setItem(PRODUCTS, fakeCartStr);
+
+    const actual = getProducts();
+
+    expect.deepEqual(fakeCart, actual);
+});
+
+test('getProducts return the default data if nothing is stored in LS', (expect) =>{
+    // localStorage.removeItem('RESULTS');
+    const expected = cookies;
+    const actual = getProducts();
+    expect.deepEqual(expected, actual);
+});
